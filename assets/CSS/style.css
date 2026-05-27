@@ -1,0 +1,137 @@
+* {
+    font-family: 'Space Grotesk';
+    box-sizing: border-box;
+    margin: 0;
+}
+
+p{
+    font-size: 18px !important;
+}
+
+h1{
+    font-size: 40px;
+}
+
+.btn, a{
+    font-size: 20px;
+}
+
+:root,[data-bs-theme=light]{
+    --global-color: #B9FF66;
+    --bs-dark: #000000;
+    --bs-dark-rgb: 00, 00, 00;
+
+    --bs-dark-text-emphasis: #495057;
+    --bs-dark-bg-subtle: #ced4da;
+
+    --bs-dark-border-subtle: #adb5bd;
+}
+
+.text-bg-global{
+    background-color: var(--global-color);
+    color: black;
+}
+
+.bg-global{
+    background-color: var(--global-color);
+}
+
+.text-global{
+    color: var(--global-color);
+}
+
+
+.accordion-button::after {
+    background-image: url("../images/icons/plus.svg");
+    background-size:40px;
+    transition: transform 0.2s ease-in-out;
+    height: 40px;
+    width: 40px;
+}
+
+.accordion-item {
+    border: none;
+}
+
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("../images/icons/minus.svg");
+    transform: rotate(-180deg);
+    background-size:40px;
+    transition: transform 0.2s ease-in-out;
+    height: 40px;
+    width: 40px;
+}
+
+.accordion-button[aria-expanded="false"]::after{
+    background-image: url("../images/icons/plus.svg");
+}
+
+.accordion{
+    --bs-accordion-border-width: 0;
+    --bs-accordion-active-bg: var(--global-color);
+    --bs-accordion-bg: white;
+    --bs-accordion-btn-bg: white;
+    --bs-accordion-btn-focus-box-shadow: none;
+}
+
+.accordion [aria-expanded="false"]{
+    --bs-accordion-active-bg: white;
+}
+
+.diamond{
+    border-right: 1px solid var(--global-color);
+    border-bottom: 1px solid var(--global-color);
+    transform: rotateZ(45deg);
+}
+
+.diamond{
+    transform: rotateZ(45deg) translateY(-69%);
+}
+
+.swiper-slide {
+    border: 1px solid white;
+    width: 33.3333333333333%;
+}
+
+#testimonies .pag *{
+    /* cursor: pointer; */
+    background-image: url('../images/icons/pagination.svg');
+    padding: 10px;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: visible;
+}
+#testimonies .pag *.swiper-pagination-bullet-active{
+    background-image: url('../images/icons/pagination-active.svg');
+}
+
+
+input[type="radio"] {
+    accent-color: var(--global-color); /* Change to your desired color */
+    appearance: none;
+    -webkit-appearance: none;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    background-color: white; /* Default unselected background */
+    cursor: pointer;
+    outline: 1px solid black;
+    padding: 18px;
+    position: relative;
+}
+
+input[type="radio"]:checked::before{
+    content: '';
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--global-color);
+}
+
+.subscribe::placeholder{ color: white; }
